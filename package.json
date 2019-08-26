@@ -1,8 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "test": "percy exec -- mocha tests/todomvc_spec.js",
-    "build": ""
 
   },
   "dependencies": {

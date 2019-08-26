@@ -29,7 +29,6 @@ jobs:
       - run:
           name: RUN TESTS
           command: |
-            npm run build
             percy snapshot ./
 
 # version: 2.1
