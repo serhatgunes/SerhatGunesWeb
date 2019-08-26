@@ -30,7 +30,7 @@ jobs:
           name: RUN TESTS
           command: |
             npm run build
-            percy snapshot ./
+            percy snapshot public
 
 # version: 2.1
 
