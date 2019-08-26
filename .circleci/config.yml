@@ -1,0 +1,59 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/ruby:2.4.1-node-browsers
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: INSTALLING DEPENDENCIES
+          command: |
+            npm install
+            gem install percy-cli
+
+      # run tests!
+      - run:
+          name: RUN TESTS
+          command: |
+            npm run build
+            npm test
+
+# version: 2.1
+
+# default_steps: &default_steps
+#   steps:
+#     - checkout
+#     - run: npm ci
+#     - run: npm test
+
+# jobs:
+#   node_8:
+#     docker:
+#       - image: circleci/node:8-browsers
+
+#     <<: *default_steps
+#  node_10_with_percy:
+    # We've opted this node version to be the one that runs and reports Percy's status
+#     docker:
+#       - image: circleci/node:10-browsers
+#     <<: *default_steps
+
+# workflows:
+#   version: 2
+#   test:
+#     jobs:
+#       - node_10_with_percy
