@@ -57,7 +57,7 @@
                                     <div class="menu_box_list">
                                         <br />
                                         <ul>
-                                            <li><a class="scroll" href="#home"><span>Homepage</span></a></li>
+                                            <li><a class="scroll" href="#home"><span>Homepaged</span></a></li>
                                             <li><a class="scroll" href="#about"><span>About me</span></a></li>
                                             <li><a class="scroll" href="#services"><span>My Services</span></a></li>
                                             <li><a class="scroll" href="#portfolio"><span>My Projects</span></a></li>
